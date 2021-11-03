@@ -1,12 +1,10 @@
 package sn.esp.dic1.Monde;
 
-
-
 public class Monde{
 // Les attributs -----------------------------------------
 private int nbL;
 private int nbC;
-private boolean[][] mat = new boolean[nbL][nbC];
+private boolean[][] mat ;
 
 // Les constructeurs --------------------------------------
 public Monde(int nbL,int nbC,boolean [][] mat){
@@ -18,6 +16,7 @@ public Monde(int nbL,int nbC,boolean [][] mat){
 public Monde(){
     nbL=10;
     nbC=10;
+    mat=new boolean[nbL][nbC];
     for (int k = 0 ; k<10; k++){
         for (int x = 0 ; x<10; x++){
             mat[k][x]=false;

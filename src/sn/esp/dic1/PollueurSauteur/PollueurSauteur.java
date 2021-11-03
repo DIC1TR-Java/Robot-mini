@@ -2,7 +2,6 @@ package sn.esp.dic1.PollueurSauteur;
 
 import sn.esp.dic1.Monde.Monde;
 import sn.esp.dic1.PollueurToutDroit.PollueurToutDroit;
-import sn.esp.dic1.RobotPollueur.RobotPollueur;
 
 public class PollueurSauteur extends PollueurToutDroit{
     private int deltax;
