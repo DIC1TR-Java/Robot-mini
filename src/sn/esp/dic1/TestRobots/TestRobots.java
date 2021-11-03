@@ -10,6 +10,7 @@ public class TestRobots{
         //test de la classe monde et des methodes
         Monde m=new Monde();
         System.out.println(m.toString());
+    
 
     }
 

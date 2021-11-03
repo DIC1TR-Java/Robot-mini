@@ -10,9 +10,15 @@ public class PollueurSauteur extends PollueurToutDroit{
         super(x, y, m, colDepart);
         this.deltax=deltax;
     }
-
-    
-     
-    
-
+    public void parcourir(){
+        int dx;
+        for( int i=0; i<this.getM().getNbL(); i++){
+            dx = this.getPosx();
+            if( i%2 != 0 )
+                dx += this.deltax;
+            dx %= this.getM().getNbC();
+            this.vaEn(dx, i);
+            this.polluer();
+        }
+    }
 }
