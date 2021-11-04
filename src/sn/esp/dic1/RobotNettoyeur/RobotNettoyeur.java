@@ -7,8 +7,8 @@ import sn.esp.dic1.Robot.*;
 public class RobotNettoyeur extends Robot{
     
     //constructeur
-    public RobotNettoyeur(int posx,int posy,Monde m){
-        super(posx, posy, m);
+    public RobotNettoyeur(Monde m){
+        super(0,0,m);
     }
 
 
@@ -20,14 +20,16 @@ public class RobotNettoyeur extends Robot{
     //methode parcourir en boustrophedon
     public void parcourir(){
         for(int i=0; i<this.getM().getNbL(); i++){
-            if(i%2==0){
-                for(int j=0; j<this.getM().getNbC();j++){
-                    this.nettoyer();
+            if( i%2 == 0 ){
+                for(int j=0; j<this.getM().getNbC(); j++){
+                    this.vaEn(j, i);
+                    if(this.getM().estSale(i, j)) this.nettoyer();
                 }
             }
             else{
-                for(int j=this.getM().getNbC()-1; j<=0; j--){
-                    this.nettoyer();
+                for(int j=this.getM().getNbC()-1; j>=0; j--){
+                    this.vaEn(j, i);
+                    if(this.getM().estSale(i, j)) this.nettoyer();
                 }
             }
         }

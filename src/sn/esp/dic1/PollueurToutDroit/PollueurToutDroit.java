@@ -6,9 +6,10 @@ public class PollueurToutDroit extends RobotPollueur{
 
 	private int colDepart;//numero de la colonne de depart
 
-
-    public PollueurToutDroit(int x, int y, Monde m ,int colDepart){
-        super(x,y,m);
+    
+    //int x, int y, Monde m ,int colDepart
+    public PollueurToutDroit(int colDepart,Monde m){  
+        super(colDepart,0,m);
         this.colDepart=colDepart;
     }
 
@@ -23,7 +24,7 @@ public class PollueurToutDroit extends RobotPollueur{
    
     public void parcourir(){
     	for(int i=0;i<this.getM().getNbL();i++){
-    		this.vaEn(i,this.colDepart);
+    		this.vaEn(this.colDepart,i);
     		this.polluer();
 	    }
     }

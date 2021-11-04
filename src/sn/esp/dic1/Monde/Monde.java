@@ -4,24 +4,25 @@ public class Monde{
 // Les attributs -----------------------------------------
 private int nbL;
 private int nbC;
-private boolean[][] mat ;
+private boolean mat[][] ;
 
 // Les constructeurs --------------------------------------
-public Monde(int nbL,int nbC,boolean [][] mat){
-    this.nbL=nbL;
-    this.nbC=nbC;
-    this.mat=mat;
+public Monde(){
+    this.nbL = 10;
+    this.nbC = 10;
+    this.mat = new boolean[this.nbL][this.nbC];
+    for(int i=0; i<this.nbL; i++)
+        for(int j=0; j<this.nbC; j++)
+            this.mat[i][j] = false;
 }
 
-public Monde(){
-    nbL=10;
-    nbC=10;
-    mat=new boolean[nbL][nbC];
-    for (int k = 0 ; k<10; k++){
-        for (int x = 0 ; x<10; x++){
-            mat[k][x]=false;
-        }
-    }
+public Monde(int l, int c){
+    this.nbL = l;
+    this.nbC = c;
+    this.mat = new boolean[this.nbL][this.nbC];
+    for(int i=0; i<(this.nbL-1); i++)
+        for(int j=0; j<(this.nbC-1); j++)
+            this.mat[i][j] = false;
 }
 
 // Les acceusseurs ----------------------------------------

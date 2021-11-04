@@ -1,4 +1,6 @@
 package sn.esp.dic1.Robot;
+
+import java.lang.Math;
 import sn.esp.dic1.Monde.Monde;
 
 
@@ -16,7 +18,11 @@ public abstract class Robot{
     }
 
     public Robot(Monde m){
-        this((int)(Math.floor(Math.random()*m.getNbL())),(int)(Math.floor(Math.random()*m.getNbC())),m);
+        // this((int)(Math.floor(Math.random()*m.getNbL())),(int)(Math.floor(Math.random()*m.getNbC())),m);
+        this(0, 0, m);
+        int l = m.getNbL();int c = m.getNbC();
+        this.posx = (int)(Math.random() * c);
+        this.posy = (int)(Math.random() * l);
     }
 
     // Les accesseurs --------------------------------------------------
