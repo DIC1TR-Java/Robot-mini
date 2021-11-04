@@ -12,17 +12,17 @@ public class TestRobots{
         //test des classes et des methodes
         Monde m = new Monde();
         System.out.println(m.toString());
-        PollueurToutDroit ptd = new PollueurToutDroit(3, m);
-        ptd.parcourir();
+        PollueurToutDroit pollueurTD = new PollueurToutDroit(3, m);
+        pollueurTD.parcourir();
         System.out.println(m.toString());
-        PollueurSauteur ps = new PollueurSauteur(2, 3, m);
-        ps.parcourir();
+        PollueurSauteur pollueurS = new PollueurSauteur(2, 3, m);
+        pollueurS.parcourir();
         System.out.println(m.toString());
-        RobotNettoyeur rn = new RobotNettoyeur(m);
-        rn.parcourir();
+        RobotNettoyeur robotN = new RobotNettoyeur(m);
+        robotN.parcourir();
         System.out.println(m.toString());
-        NettoyeurDistrait nd = new NettoyeurDistrait(m);
-        nd.parcourir();
+        NettoyeurDistrait nettoyeurD = new NettoyeurDistrait(m);
+        nettoyeurD.parcourir();
         System.out.println(m.toString());
         
 
